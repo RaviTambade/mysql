@@ -324,6 +324,110 @@ CALL ProcessEmployeeAndDepartment();
 This will execute the stored procedure, fetch data from both tables using cursors, and process the data accordingly. Adjust the processing logic inside the loops as per your requirements.
 
 
+## Cursor in Database
+
+In MySQL and many other database systems, a cursor is a database object that enables the traversal of the result set of a query. Think of it as a pointer or a marker that moves through the rows of a result set one by one. 
+
+Here's how it works:
+
+1. **Fetching Rows**: When you execute a query in MySQL, it often returns multiple rows of data. A cursor allows you to fetch these rows one at a time, rather than fetching the entire result set at once.
+
+2. **Sequential Access**: Cursors provide a way to sequentially access the rows of a result set. This means you can process each row individually, perform operations on it, and move to the next row until you reach the end of the result set.
+
+3. **Processing Data**: Cursors are commonly used in stored procedures, triggers, and other database programming scenarios where you need to perform operations on each row of a result set programmatically.
+
+4. **Control and Flexibility**: Cursors offer control and flexibility in navigating and manipulating result sets. They allow you to move forward, backward, or to specific rows within the result set, depending on your application's requirements.
+
+However, it's important to note that excessive use of cursors can sometimes lead to performance issues, especially when dealing with large result sets, as they may involve additional overhead. So, while cursors provide powerful functionality, they should be used judiciously.
+
+
+## Simple example of Cursor 
+Certainly! Let's walk through a simple example of how you might use a cursor in MySQL.
+
+Suppose we have a table called `employees` with the following structure:
+
+```sql
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    salary DECIMAL(10, 2)
+);
+```
+
+And it contains some sample data:
+
+```
++----+------------+--------+
+| id | name       | salary |
++----+------------+--------+
+|  1 | John       | 50000.00 |
+|  2 | Alice      | 60000.00 |
+|  3 | Bob        | 55000.00 |
++----+------------+--------+
+```
+
+Now, let's say we want to calculate the total salary of all employees. We can use a cursor to iterate through each row of the `employees` table and accumulate the salaries.
+
+Here's how you might do it with a cursor in MySQL:
+
+```sql
+DELIMITER //
+
+CREATE PROCEDURE calculate_total_salary()
+BEGIN
+    DECLARE total_salary DECIMAL(10, 2);
+    DECLARE emp_salary DECIMAL(10, 2);
+    
+    -- Initialize total_salary
+    SET total_salary = 0;
+
+    -- Declare cursor for selecting employees
+    DECLARE emp_cursor CURSOR FOR 
+        SELECT salary FROM employees;
+
+    -- Declare a NOT FOUND handler
+    DECLARE CONTINUE HANDLER FOR NOT FOUND 
+        SET done = TRUE;
+
+    -- Open the cursor
+    OPEN emp_cursor;
+
+    -- Loop through each row
+    emp_loop: LOOP
+        -- Fetch the next row
+        FETCH emp_cursor INTO emp_salary;
+        
+        -- Check if no more rows to fetch
+        IF done THEN
+            LEAVE emp_loop;
+        END IF;
+        
+        -- Accumulate salary
+        SET total_salary = total_salary + emp_salary;
+    END LOOP;
+
+    -- Close the cursor
+    CLOSE emp_cursor;
+
+    -- Output the total salary
+    SELECT total_salary AS 'Total Salary';
+END //
+
+DELIMITER ;
+
+-- Call the procedure
+CALL calculate_total_salary();
+```
+
+In this example:
+
+- We declare a cursor named `emp_cursor` to select the `salary` column from the `employees` table.
+- We open the cursor and use a loop to fetch each row one by one.
+- Inside the loop, we accumulate the salary of each employee into the `total_salary` variable.
+- Once all rows are processed, we close the cursor and output the total salary.
+
+This is a basic example of how you might use a cursor in MySQL to process rows of data from a table. Cursors can be handy for performing operations on individual rows or for more complex data processing tasks. However, keep in mind that they may not always be the most efficient solution, especially for large datasets.
+
 
 ## Stored Procedure with Multiple cursors working parallely
 In MySQL, stored procedures can update multiple tables in parallel using multiple cursors. However, it's essential to understand that MySQL does not support parallel execution of statements within a single connection. Therefore, the updates to different tables in a stored procedure would be sequential, not parallel.
