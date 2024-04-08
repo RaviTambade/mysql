@@ -247,83 +247,6 @@ Here's how you can use stored procedures with transactions in MySQL:
 By using stored procedures with transactions in MySQL, you can ensure data integrity and consistency by executing multiple SQL statements as a single atomic operation, making your database operations more robust and reliable.
 
 
-## StoredProcedure with Multiple Cursors
-In MySQL, you can work with multiple cursors within a stored procedure to fetch and process multiple result sets from queries. Here's an example of how you can create a stored procedure that uses multiple cursors:
-
-Let's say we have a database with two tables: `employees` and `departments`. We want to create a stored procedure that fetches data from both tables using two separate cursors and then processes the data.
-
-```sql
-DELIMITER //
-
-CREATE PROCEDURE ProcessEmployeeAndDepartment()
-BEGIN
-    -- Declare variables for employee and department details
-    DECLARE emp_id INT;
-    DECLARE emp_name VARCHAR(255);
-    DECLARE dept_id INT;
-    DECLARE dept_name VARCHAR(255);
-
-    -- Declare cursor for fetching employee details
-    DECLARE emp_cursor CURSOR FOR
-        SELECT id, name FROM employees;
-
-    -- Declare cursor for fetching department details
-    DECLARE dept_cursor CURSOR FOR
-        SELECT id, name FROM departments;
-
-    -- Open the cursors
-    OPEN emp_cursor;
-    OPEN dept_cursor;
-
-    -- Fetch and process employee details
-    employee_loop: LOOP
-        FETCH emp_cursor INTO emp_id, emp_name;
-        IF emp_id IS NULL THEN
-            LEAVE employee_loop;
-        END IF;
-        
-        -- Process employee details
-        -- For example, print employee details
-        SELECT CONCAT('Employee: ', emp_name);
-    END LOOP;
-
-    -- Fetch and process department details
-    department_loop: LOOP
-        FETCH dept_cursor INTO dept_id, dept_name;
-        IF dept_id IS NULL THEN
-            LEAVE department_loop;
-        END IF;
-        
-        -- Process department details
-        -- For example, print department details
-        SELECT CONCAT('Department: ', dept_name);
-    END LOOP;
-
-    -- Close the cursors
-    CLOSE emp_cursor;
-    CLOSE dept_cursor;
-END //
-
-DELIMITER ;
-```
-
-In this stored procedure:
-
-- We declare variables to store employee and department details (`emp_id`, `emp_name`, `dept_id`, `dept_name`).
-- We declare two cursors (`emp_cursor` and `dept_cursor`) to fetch data from the `employees` and `departments` tables, respectively.
-- We open the cursors using the `OPEN` statement.
-- We fetch data from each cursor using a loop (`employee_loop` and `department_loop`) and process the data as needed.
-- Finally, we close the cursors using the `CLOSE` statement.
-
-To call this stored procedure:
-
-```sql
-CALL ProcessEmployeeAndDepartment();
-```
-
-This will execute the stored procedure, fetch data from both tables using cursors, and process the data accordingly. Adjust the processing logic inside the loops as per your requirements.
-
-
 ## Cursor in Database
 
 In MySQL and many other database systems, a cursor is a database object that enables the traversal of the result set of a query. Think of it as a pointer or a marker that moves through the rows of a result set one by one. 
@@ -427,6 +350,84 @@ In this example:
 - Once all rows are processed, we close the cursor and output the total salary.
 
 This is a basic example of how you might use a cursor in MySQL to process rows of data from a table. Cursors can be handy for performing operations on individual rows or for more complex data processing tasks. However, keep in mind that they may not always be the most efficient solution, especially for large datasets.
+
+
+
+## StoredProcedure with Multiple Cursors
+In MySQL, you can work with multiple cursors within a stored procedure to fetch and process multiple result sets from queries. Here's an example of how you can create a stored procedure that uses multiple cursors:
+
+Let's say we have a database with two tables: `employees` and `departments`. We want to create a stored procedure that fetches data from both tables using two separate cursors and then processes the data.
+
+```sql
+DELIMITER //
+
+CREATE PROCEDURE ProcessEmployeeAndDepartment()
+BEGIN
+    -- Declare variables for employee and department details
+    DECLARE emp_id INT;
+    DECLARE emp_name VARCHAR(255);
+    DECLARE dept_id INT;
+    DECLARE dept_name VARCHAR(255);
+
+    -- Declare cursor for fetching employee details
+    DECLARE emp_cursor CURSOR FOR
+        SELECT id, name FROM employees;
+
+    -- Declare cursor for fetching department details
+    DECLARE dept_cursor CURSOR FOR
+        SELECT id, name FROM departments;
+
+    -- Open the cursors
+    OPEN emp_cursor;
+    OPEN dept_cursor;
+
+    -- Fetch and process employee details
+    employee_loop: LOOP
+        FETCH emp_cursor INTO emp_id, emp_name;
+        IF emp_id IS NULL THEN
+            LEAVE employee_loop;
+        END IF;
+        
+        -- Process employee details
+        -- For example, print employee details
+        SELECT CONCAT('Employee: ', emp_name);
+    END LOOP;
+
+    -- Fetch and process department details
+    department_loop: LOOP
+        FETCH dept_cursor INTO dept_id, dept_name;
+        IF dept_id IS NULL THEN
+            LEAVE department_loop;
+        END IF;
+        
+        -- Process department details
+        -- For example, print department details
+        SELECT CONCAT('Department: ', dept_name);
+    END LOOP;
+
+    -- Close the cursors
+    CLOSE emp_cursor;
+    CLOSE dept_cursor;
+END //
+
+DELIMITER ;
+```
+
+In this stored procedure:
+
+- We declare variables to store employee and department details (`emp_id`, `emp_name`, `dept_id`, `dept_name`).
+- We declare two cursors (`emp_cursor` and `dept_cursor`) to fetch data from the `employees` and `departments` tables, respectively.
+- We open the cursors using the `OPEN` statement.
+- We fetch data from each cursor using a loop (`employee_loop` and `department_loop`) and process the data as needed.
+- Finally, we close the cursors using the `CLOSE` statement.
+
+To call this stored procedure:
+
+```sql
+CALL ProcessEmployeeAndDepartment();
+```
+
+This will execute the stored procedure, fetch data from both tables using cursors, and process the data accordingly. Adjust the processing logic inside the loops as per your requirements.
 
 
 ## Stored Procedure with Multiple cursors working parallely
