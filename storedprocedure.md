@@ -342,7 +342,7 @@ However, it's important to note that excessive use of cursors can sometimes lead
 
 
 ## Simple example of Cursor 
-Certainly! Let's walk through a simple example of how you might use a cursor in MySQL.
+Let's walk through a simple example of how you might use a cursor in MySQL.
 
 Suppose we have a table called `employees` with the following structure:
 
