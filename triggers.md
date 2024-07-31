@@ -1,4 +1,5 @@
 # Database Triggers
+
 In a database management system (DBMS), a trigger is a special type of stored procedure that is automatically executed or fired in response to certain events or actions occurring in the database. These events can include data manipulation operations (such as INSERT, UPDATE, DELETE), or database schema changes.
 
 Triggers are used to enforce business rules, maintain data integrity, and automate tasks within the database. They are often employed to perform validation checks, audit changes to the data, propagate changes to related tables, or trigger notifications based on specific conditions.
