@@ -1,9 +1,6 @@
-
 ## *"Function vs Stored Procedure – Who Does What in the SQL Kingdom?"*
 
 > *“Imagine you're running a restaurant. Now, let me introduce you to two important people in your kitchen: Chef Function and Manager Procedure.”*
-
-
 
 ### 🌟 Scene 1: Meet Chef Function – The Specialist
 
@@ -49,9 +46,6 @@ END
 ```sql
 SELECT dbo.GetEmployeeFullName(101)
 ```
-
----
-
 ### 🌟 Scene 2: Meet Manager Procedure – The Doer
 
 Manager Procedure is like your operations head. He can do **anything**:
@@ -65,8 +59,6 @@ When you tell him:
 
 > “Transfer ₹500 from Account A to B”
 > He manages everything — including keeping records, checking balances, and rolling things back if something goes wrong.
-
----
 
 ### ✅ What Manager Procedure Can Do:
 
@@ -96,8 +88,6 @@ END
 ```sql
 EXEC GetEmployeeDetails 101
 ```
-
-
 ## 🎓 The Key Differences – Mentor’s Table:
 
 | Feature                 | 👨‍🍳 **Function (Chef)**        | 🧑‍💼 **Stored Procedure (Manager)**           |
@@ -111,7 +101,6 @@ EXEC GetEmployeeDetails 101
 | **Deterministic**       | ✅ Yes (same input = same output) | ❌ Not always deterministic                     |
 | **Example Usage**       | `SELECT dbo.GetName(101)`        | `EXEC GetEmployeeDetails 101`                  |
 
-
 ## 🧠 Mentor’s Tip: When to Use What?
 
 | Use Case                    | Use a **Function** When...                             | Use a **Stored Procedure** When...                       |
@@ -119,7 +108,6 @@ EXEC GetEmployeeDetails 101
 | You need a value in a query | …you want to calculate or format something in a SELECT | …you want to modify data or run multiple SQL steps       |
 | You want it reusable        | …you reuse the same logic in multiple queries          | …you need to automate backend processes                  |
 | You want performance        | …for small operations in WHERE/SELECT                  | …for bulk operations, batch jobs, or multi-table updates |
-
 
 ## 🧪 Mentor Challenge
 
@@ -143,4 +131,3 @@ Then ask yourself:
 Both are powerful.
 Both are needed.
 But it’s your understanding that makes the real magic happen. 🌟
-

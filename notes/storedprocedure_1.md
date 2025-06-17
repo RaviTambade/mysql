@@ -4,8 +4,6 @@
 
 Let me walk you through how we automate these operations using **MySQL stored procedures**, just like a manager training their shop assistants.
 
----
-
 ### 🛒 1. Placing an Order: `PlaceOrder(...)`
 
 > “Ravi walks into your online store and places an order: 2 packets of Basmati Rice and 1 packet of Green Tea. What should happen?”
@@ -30,8 +28,6 @@ CALL PlaceOrder(
 
 🧠 *Behind the scenes*, our procedure breaks down the JSON items, checks stock, deducts inventory, and inserts a fresh bill — all in a single **transaction**. If something fails, **ROLLBACK** prevents any half-completed order — just like a real cashier voids the bill if the card doesn’t work.
 
----
-
 ### 📦 2. Updating Order Status: `UpdateOrderStatus(...)`
 
 > “The order is packed and now shipped. Your system must notify the user.”
@@ -43,8 +39,6 @@ CALL UpdateOrderStatus(1, 'Shipped');
 ```
 
 🧠 *Why a procedure?* Because the logic may grow — maybe later we’ll trigger SMS alerts, check delivery boy availability, or log audit history. Better to keep it encapsulated in a procedure that evolves, rather than scatter logic in app code.
-
----
 
 ### 🧮 3. Calculating Total Order Value: `CalculateCustomerOrderTotal(...)`
 
@@ -58,8 +52,6 @@ CALL CalculateCustomerOrderTotal('Ravi Tambade');
 
 🧠 This function helps marketing, loyalty systems, or even sends birthday offers to high-spending customers. When written as a stored procedure, you avoid repeating business logic and centralize your rules.
 
----
-
 ### 📜 4. Order History Lookup: `GetOrderHistory(...)`
 
 > “Ravi forgot what he ordered last week — can we show him his order history?”
@@ -72,8 +64,6 @@ CALL GetOrderHistory(1);
 
 🧠 This is your **customer support interface** or **my orders** page backend. Instead of writing multiple joins every time, wrap it in a clean, reusable stored procedure.
 
----
-
 ## 📘 Lessons You’ve Learned Today
 
 | Business Need             | Stored Procedure                   | Purpose                                           |
@@ -83,7 +73,6 @@ CALL GetOrderHistory(1);
 | Customer Spending Summary | `CalculateCustomerOrderTotal(...)` | Returns analytics data                            |
 | Order History             | `GetOrderHistory(...)`             | Fetches readable records for support or customers |
 
----
 
 ## 🧑‍🎓 Final Words From Mentor
 

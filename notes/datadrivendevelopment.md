@@ -1,5 +1,3 @@
- 
-
 ##   *From Flat Files to Cloud Apps – Teaching the Real Essence of Data-Driven Development*
 
 Let me take you into a class that wasn’t just about databases or coding—but about connecting the dots between **data, full-stack systems, and the future of intelligent applications.**

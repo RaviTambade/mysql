@@ -1,5 +1,3 @@
- 
-
 ## *The Data Beneath the Code — A Journey Through SQL*
 
 ### 🛤️ *“Every application has a story. That story is written in logic... and stored in data.”*

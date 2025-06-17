@@ -25,8 +25,6 @@ A **stored procedure** is:
 * **Precompiled** and optimized for performance
 * Equipped with **parameters**, **control flow**, and **transaction control**
 
-
-
 ## 🔍 Key Characteristics (The Magic Inside)
 
 ### 🔁 1. **Precompiled**
@@ -86,7 +84,6 @@ All calculations, validations, rules live inside the database. It’s your **sin
 
 Need to fix a logic bug? Just update the procedure. No need to recompile the app or push a new release. That’s how real teams move **fast and safe**.
 
----
 
 ## 👨‍💻 Sample Stored Procedure
 
