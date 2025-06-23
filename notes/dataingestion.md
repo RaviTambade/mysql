@@ -1,6 +1,5 @@
 
-👨‍🏫 ** "How I Explained Data Ingestion to My Students Using a Real-World Analogy"**
-
+##  "How I Explained Data Ingestion to My Students Using a Real-World Analogy"
 
 
 > "Imagine you are managing a library 📚. Every morning, new books arrive from different suppliers—some come in neatly packed boxes, some wrapped in paper, some even sent digitally. Your job is to take those books and arrange them properly on the right shelves in the library. You might even keep a log of when they arrived, who sent them, and where they belong.
