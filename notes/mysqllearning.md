@@ -149,9 +149,9 @@ This is where MySQL meets **real-world scalability**.
 
 > 💡 “You don’t really understand SQL until you’ve used it to solve a real problem.”
 
-✅ Build a mini **inventory system**
-✅ Design a **blog** with posts, users, and comments
-✅ Create a **shopping cart schema** for an e-commerce app
+- ✅ Build a mini **inventory system**
+- ✅ Design a **blog** with posts, users, and comments
+- ✅ Create a **shopping cart schema** for an e-commerce app
 
 These projects will **transform your knowledge into skill**.
 
