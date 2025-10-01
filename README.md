@@ -36,7 +36,7 @@ Here’s how your journey is structured — each topic builds on the previous on
 - [Functions](notes/functionsvsstoredproc.md) 👉 Understand how logic can be reused and abstracted 
 - [Stored Procedures](notes/storedprocedure.md) 👉Learn to automate business rules 
 
-- [Trigger Automation in DB](notes/triggers.md) 👉Automate reactions to data changes 
+- [Triggers](notes/triggers.md) 👉Automate reactions to data changes 
 - [Practice SQL File](notes/test.sql) 👉Hands-on file to try out everything you've learned 
  
 ## 🛠️ Who Should Use This?
