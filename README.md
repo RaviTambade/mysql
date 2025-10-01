@@ -27,6 +27,7 @@ From the very basics of MySQL syntax to the deeper understanding of triggers, tr
 Here’s how your journey is structured — each topic builds on the previous one:
  
 <p>Before starting a learning journey, let us understand todays world</p> 
+
 - [Artificial Intelligence](notes/ai.md)   
 - [ Story of Data ](notes/datastory.md) 
 - [Schema Design & Optimization](notes/datatointelligence.md)  
