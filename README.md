@@ -26,7 +26,9 @@ From the very basics of MySQL syntax to the deeper understanding of triggers, tr
 
 Here’s how your journey is structured — each topic builds on the previous one:
  
-- [MySQL Syntax & Setup](notes/mysqllearning.md)  👉Install MySQL, learn basic commands 
+ 
+
+- [MySQL Syntax & Setup](notes/stepbystepinstallation.md)  👉Install MySQL, learn basic commands 
 - [Core DBMS Concepts](notes/dbms.md) 👉 What is a database? Understanding its backbone 
 - [Schema Design & Optimization](notes/normalizationdenormalizaiton.md)  👉Normalize or denormalize? Learn to choose wisely 
 - [Multi-table Data Retrieval (JOINS)](notes/joins.md)👉 Retrieve and combine data from related tables 
