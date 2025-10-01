@@ -1,4 +1,4 @@
-# 🌱 Welcome to MySQL Learning Journey
+# 🌱 Welcome to the world of Data
 
 > “Imagine data as seeds, and databases as the fertile soil where they grow into meaningful insights.”  
 > — Mentor Ravi Tambade
