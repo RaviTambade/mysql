@@ -26,16 +26,7 @@ From the very basics of MySQL syntax to the deeper understanding of triggers, tr
 
 Here’s how your journey is structured — each topic builds on the previous one:
  
- 
- https://github.com/RaviTambade/TFLMysql/blob/main/notes/ai.md
-https://github.com/RaviTambade/TFLMysql/blob/main/notes/datastory.md
-https://github.com/RaviTambade/TFLMysql/blob/main/notes/rawdatatowisdom.md
-https://github.com/RaviTambade/TFLMysql/blob/main/notes/datatointelligence.md
-https://github.com/RaviTambade/TFLMysql/blob/main/notes/datascience.md
-https://github.com/RaviTambade/TFLMysql/blob/main/notes/dataengineering.md
-https://github.com/RaviTambade/TFLMysql/blob/main/notes/dataingestion.md
-
-
+<p>Before starting a learning journey, let us understand todays world</p> 
 - [Artificial Intelligence](notes/ai.md)   
 - [ Story of Data ](notes/datastory.md) 
 - [Schema Design & Optimization](notes/datatointelligence.md)  
