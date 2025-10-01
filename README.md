@@ -27,6 +27,23 @@ From the very basics of MySQL syntax to the deeper understanding of triggers, tr
 Here’s how your journey is structured — each topic builds on the previous one:
  
  
+ https://github.com/RaviTambade/TFLMysql/blob/main/notes/ai.md
+https://github.com/RaviTambade/TFLMysql/blob/main/notes/datastory.md
+https://github.com/RaviTambade/TFLMysql/blob/main/notes/rawdatatowisdom.md
+https://github.com/RaviTambade/TFLMysql/blob/main/notes/datatointelligence.md
+https://github.com/RaviTambade/TFLMysql/blob/main/notes/datascience.md
+https://github.com/RaviTambade/TFLMysql/blob/main/notes/dataengineering.md
+https://github.com/RaviTambade/TFLMysql/blob/main/notes/dataingestion.md
+
+
+- [Artificial Intelligence](notes/ai.md)   
+- [ Story of Data ](notes/datastory.md) 
+- [Schema Design & Optimization](notes/datatointelligence.md)  
+- [Data Science ](notes/datascience.md)
+- [Data Engineering](notes/dataengineering.md)  
+- [Digesting Data](notes/dataingestion.md)
+
+<P>Let us start with Basics</p>
 
 - [MySQL Syntax & Setup](notes/stepbystepinstallation.md)  👉Install MySQL, learn basic commands 
 - [Core DBMS Concepts](notes/dbms.md) 👉 What is a database? Understanding its backbone 
