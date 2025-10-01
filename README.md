@@ -34,7 +34,7 @@ Here’s how your journey is structured — each topic builds on the previous on
 - [Multi-table Data Retrieval (JOINS)](notes/joins.md)👉 Retrieve and combine data from related tables 
 - [Functions](notes/functionsvsstoredproc.md) 👉 Understand how logic can be reused and abstracted 
 - [Stored Procedures](notes/storedprocedure.md) 👉Learn to automate business rules 
-- [Transaction & Concurrency Control](notes/pesimisticoptimistic.md)  👉 Manage real-time access & avoid conflicts 
+- [Transaction & Concurrency Control](notes/transactions.md)  👉 Manage real-time access & avoid conflicts 
 - [Trigger Automation in DB](notes/triggers.md) 👉Automate reactions to data changes 
 - [Practice SQL File](notes/test.sql) 👉Hands-on file to try out everything you've learned 
  
