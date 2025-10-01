@@ -1,7 +1,9 @@
--- Certainly! Here are more business scenarios where transactions in MySQL are crucial for maintaining data integrity and consistency:
+--Business scenarios where transactions in MySQL are crucial 
+--for maintaining data integrity and consistency:
 
 -- 1. Inventory Reorder
--- Scenario: When inventory levels fall below a certain threshold, reorder items and update stock levels accordingly.
+-- Scenario: When inventory levels fall below a certain threshold, 
+-- reorder items and update stock levels accordingly.
 
 DROP PROCEDURE IF EXISTS reorder_inventory;
 
@@ -44,7 +46,8 @@ SELECT * FROM inventory ;
 
 
 -- 2. E-commerce Order Fulfillment
--- Scenario: Process an order, update stock levels, and manage shipping details. Ensure all steps are successful before finalizing the order.
+-- Scenario: Process an order, update stock levels, and manage shipping details. 
+-- Ensure all steps are successful before finalizing the order.
 
 -- Wrapping Transaction in the Procedure
 DELIMITER //
@@ -88,7 +91,8 @@ SELECT fulfillment_id, order_id, fulfillment_date, status, tracking_number, carr
 FROM order_fulfillment
 WHERE order_id = '5';
 
--- Expected result: There should be a new record with the given order_id, product_id, quantity 5, and a recent fulfillment_date.
+-- Expected result: 
+-- There should be a new record with the given order_id, product_id, quantity 5, and a recent fulfillment_date.
 
 -- Check the shipping details
 SELECT shipment_id, order_id, shipping_method_id, shipment_date, tracking_number, status
