@@ -22,7 +22,7 @@ From the very basics of MySQL syntax to the deeper understanding of triggers, tr
 - Ensure consistency with **Transactions & Locking**
 - Design better systems through **Normalization & Optimization**
 
-## 🗂️ Learning Path Overview
+## 🗂️ Learning Path of Data World
 
 Here’s how your journey is structured — each topic builds on the previous one:
  
