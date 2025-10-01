@@ -30,16 +30,14 @@ Here’s how your journey is structured — each topic builds on the previous on
 |------|-------|-------------|
 | 1️⃣ | [MySQL Syntax & Setup](notes/mysqllearning.md) | Install MySQL, learn basic commands |
 | 2️⃣ | [Core DBMS Concepts](notes/dbms.md) | What is a database? Understanding its backbone |
-| 3️⃣ | [Multi-table Data Retrieval (JOINS)](notes/joins.md) | Retrieve and combine data from related tables |
-| 4️⃣ | [Functions vs Stored Procedures](notes/functionsvsstoredproc.md) | Understand how logic can be reused and abstracted |
+| 3️⃣ |[Schema Design & Optimization](notes/normalizationdenormalizaiton.md) | Normalize or denormalize? Learn to choose wisely |
+| 4️⃣ | [Multi-table Data Retrieval (JOINS)](notes/joins.md) | Retrieve and combine data from related tables |
+[Functions vs Stored Procedures](notes/functionsvsstoredproc.md) | Understand how logic can be reused and abstracted |
 | 5️⃣ | [Stored Procedure Basics](notes/storedprocedure.md) | Learn to automate business rules |
-| 6️⃣ | [Advanced Stored Procedures](notes/storedprocedure_1.md) | Dive deeper into parameterized and dynamic logic |
+| 6️⃣ |  [Transaction & Concurrency Control](notes/pesimisticoptimistic.md) | Manage real-time access & avoid conflicts |
 | 7️⃣ | [Trigger Automation in DB](notes/triggers.md) | Automate reactions to data changes |
-| 8️⃣ | [Schema Design & Optimization](notes/normalizationdenormalizaiton.md) | Normalize or denormalize? Learn to choose wisely |
-| 9️⃣ | [Transaction & Concurrency Control](notes/pesimisticoptimistic.md) | Manage real-time access & avoid conflicts |
-| 🔟 | [Practice SQL File](notes/test.sql) | Hands-on file to try out everything you've learned |
-
-
+| 8️⃣ | [Practice SQL File](notes/test.sql) | Hands-on file to try out everything you've learned |
+ 
 ## 🛠️ Who Should Use This?
 
 Whether you're a:
