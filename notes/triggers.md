@@ -1,4 +1,4 @@
-##  **The Invisible Watchman — The Power of Database Triggers**
+##  ** Triggers : The Invisible Watchman**
 
 
 ### 🏛️ *Scene 1: The Magical Palace of Data*
